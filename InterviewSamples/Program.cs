@@ -12,11 +12,11 @@ namespace InterviewSamples
         public static void Main(string[] args)
         {
             Console.WriteLine("Started");
-            var tree = Tree<int>.Init();
+
             
             var employees = Employee.GetEmployees();
 
-       
+
 
             //TASK 1 (Task1.cs):
             //Select Count of Employees by Every Department in State=TX return object {DeparmentName, Count}
@@ -31,7 +31,8 @@ namespace InterviewSamples
             //TASK 2
             //Given Tree object above return an array of Values on Level 3.
 
-            var result = GetValues<int>(tree, 3);
+            //var tree = Tree<int>.Init();
+            //var result = GetValues<int>(tree, 3);
 
             //TASK 3
             //We need to retrieve 10 random users from external API. Each request is independent. Sometimes API returns error. 
