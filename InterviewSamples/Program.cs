@@ -123,27 +123,7 @@ namespace InterviewSamples
 
         public static T[] GetValues<T>(Tree<T> tree, int Level)
         {
-            List<T> data = new List<T>();
-
-            if (tree == null)
-                return null;
-  
-
-            if (Level==1)
-            {
-                data.Add(tree.Value);
-                return data.ToArray();
-            }
-            if (tree.Children == null)
-                return null;
-
-            foreach (Tree<T> c in tree.Children)
-            {
-                var result =  GetValues<T>(c, Level-1);
-                if (result != null)
-                    data.AddRange(result);
-            }
-            return data!=null ? data.ToArray(): null;
+            return null;
         }
     }
 }
