@@ -5,7 +5,7 @@ const people = [{ name: "John Doe", age: 40, state: "CA" }, { name: "Jane Doe", 
 //states = [{name:"CA",averageAge: 47.5, people: ["John Doe", "Tom Cruise"] },{name:"NY",averageAge: 25, people: ["Jane Doe"] }];
 // function getStates(people) {....}
 
-// states = getStates(people);
+console.log(people);
 
 
 

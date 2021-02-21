@@ -40,6 +40,8 @@ namespace InterviewSamples
             // {"results": [{ "name":{"first":"FIRST NAME", "last": "LAST NAME" } }] }  should be transformed to sting  $"{first} {last}"
 
             //var result2 = GetUsers(10);
+
+            Console.WriteLine("Finished");
         }
         public static string[] GetUsers(int count)
         {
