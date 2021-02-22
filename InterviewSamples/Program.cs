@@ -14,15 +14,15 @@ namespace InterviewSamples
             Console.WriteLine("Started");
 
             
-            var employees = Employee.GetEmployees();
+            var employees = Employee.GetEmployees(); //employee has {Name, Title, DepartmentName} fields
 
 
 
             //TASK 1 (Task1.cs):
-            //Select Count of Employees by Every Department in State=TX return object {DeparmentName, Count}
+            //Select Count of Employees by Every Department in State=TX. Return array of objects {DeparmentName, Count}
 
             //TASK 1.1:
-            //You need to create new Manager class (above) and  override GetACL method to return updated set of access rights (above).  
+            //You need to create new Manager class (inherited from Employee) and  override GetACL method to return updated set of access rights (above).  
             //How can you change implementation of GetEmployees method so it will return Managers array?
             //How to make Employee/Manager objects immutable?
 
