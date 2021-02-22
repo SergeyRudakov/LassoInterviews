@@ -9,11 +9,13 @@ namespace InterviewSamples
     
     public class ApiServices
     {
-        static HttpClient client = new HttpClient();
+        
 
 
         public async Task<string> GetData(string url)
         {
+            HttpClient client = new HttpClient();
+            
             var data = await client.GetStringAsync(url);
             return data;
         }
