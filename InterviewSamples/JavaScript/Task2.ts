@@ -5,25 +5,26 @@
     
 */
 interface TreeNode {
-    value: Number;
+    value: number;
     children: TreeNode[];
 }
 
 const tree = {
     value: 5, children:
         [{
+            /*Level 2*/
             value: 7, children:
-                    [{ value: 10, children: null }, { value: 13, children: null }]
+                 [{ /*Level 3*/ value: 10, children: null }, { value: 13, children: null }]
         },
          {
                 value: 25, children:
                  [{ value: 9, children: null },
-                  { value: -5, children: [{ value: 100, children: null }] }]
+                     { value: -5, children: [{ /*Level 4*/ value: 100, children: null }] }]
          }
         ]
 };
 
-function getValues(tree: TreeNode, level: Number): Number[] {
+function getValues(tree: TreeNode, level: number): number[] {
 
     return [];
 }
@@ -44,4 +45,7 @@ function getDuplicates(input: string): string {
     return null;
 }
 
+const duplicates = getDuplicates('faaaabbcpppefpxh');
+
+console.log(duplicates);
 
