@@ -41,6 +41,13 @@ namespace InterviewSamples
 
             //var result2 = GetUsers(10);
 
+            //TASK 4
+            //Let's discuss how Task 4 code can be improved including naming style, possible bugs, pattern usage, 
+            //reducing the amount of code, improving long-term support and other best practices. 
+            //You can just name things, not have to change actual code.
+            //PostManager postManager = new MarketingPostManager();
+
+
             Console.WriteLine("Finished");
         }
         public static string[] GetUsers(int count)
