@@ -45,7 +45,7 @@ function getDuplicates(input: string): string {
     let elem = {};
     
     //count visited
-    for (var char of input) {
+    for (let char of input) {
         if (elem[char])
             elem[char]++;
         else
@@ -53,7 +53,7 @@ function getDuplicates(input: string): string {
     }
     
     //find all visited
-    for (var key in elem)
+    for (let key in elem)
     {
         if (elem[key] > 1)
             elem += key;
