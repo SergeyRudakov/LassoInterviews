@@ -35,11 +35,15 @@ namespace InterviewSamples
         {
             var root = new Tree<int>();
             root.Value = 5;
-            root.Children = new List<Tree<int>>();
-            root.Children = new List<Tree<int>>() { new Tree<int>(5, new int[] {7,8,9}),
-        new Tree<int>(0, new int[] { 3, 5,-9 }),
-        new Tree<int>(25, new int[] { 6, 78, 3 })
-    };
+            //???
+            root.Children = new List<Tree<int>>() { };
+            
+            root.Children = new List<Tree<int>>()
+            {
+                new Tree<int>(5, new int[] {7, 8, 9}),
+                new Tree<int>(0, new int[] {3, 5, -9}),
+                new Tree<int>(25, new int[] {6, 78, 3})
+            };
 
             return root;
         }
