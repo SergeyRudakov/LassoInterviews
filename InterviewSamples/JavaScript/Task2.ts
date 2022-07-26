@@ -4,9 +4,9 @@
  
     
 */
-interface TreeNode {
-    value: number;
-    children: TreeNode[];
+interface TreeNode<T>{
+    value: T;
+    children: TreeNode<T>[] | null;
 }
 
 const tree = {
@@ -24,8 +24,8 @@ const tree = {
         ]
 };
 
-function getValues(tree: TreeNode, level: number): number[] {
-
+function getValues<T>(tree: TreeNode<T>, level: number): number[] 
+{
     return [];
 }
 
@@ -41,8 +41,24 @@ console.log(result);
  */
 
 function getDuplicates(input: string): string {
-
-    return null;
+    let result = "";
+    let elem = {};
+    
+    //count visited
+    for (let char of input) {
+        if (elem[char])
+            elem[char]++;
+        else
+            elem[char] = 1;
+    }
+    
+    //find all visited
+    for (let key in elem)
+    {
+        if (elem[key] > 1)
+            elem += key;
+    }
+    return result.split('').join('');
 }
 
 const duplicates = getDuplicates('faaaabbcpppefpxh');

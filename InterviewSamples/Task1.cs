@@ -16,10 +16,10 @@ namespace InterviewSamples
             DepartmentName = departmentName;
         }
 
-        public string State { get; set; }
-        public string Name { get; set; }
-        public string Title { get; set; }
-        public string DepartmentName { get; set; }
+        public string State { get; private set; }
+        public string Name { get; }
+        public string Title { get; }
+        public string DepartmentName { get; }
 
         public static IEnumerable<Employee> GetEmployees()
         {
@@ -32,7 +32,7 @@ namespace InterviewSamples
             };
         }
 
-        public string[] GetACL()
+        public virtual string[] GetACL()
         {
             return new string[] { "profile:read" };
         }
@@ -40,17 +40,18 @@ namespace InterviewSamples
 
 
 
-    /*  
+     
     public class Manager: Employee
     {
       
-        public string[] GetACL()
+        public override string[] GetACL()
         {
             return new string[] { "profile:list,read,write", "accounts:list,read" };
+        }
+
+        public Manager(string name, string title, string departmentName) : base(name, title, departmentName)
+        {
         }
     }
 
     }
-    */
-
-}
