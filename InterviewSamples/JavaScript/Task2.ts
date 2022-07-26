@@ -41,12 +41,24 @@ console.log(result);
  */
 
 function getDuplicates(input: string): string {
-    const chars = {};
-    for (let char of input){
-        chars[char] = (chars[char] || 0) + 1;
+    let result = "";
+    let elem = {};
+    
+    //count visited
+    for (var char of input) {
+        if (elem[char])
+            elem[char]++;
+        else
+            elem[char] = 1;
     }
-
-    return Object.entries(chars).filter(char => char[1] > 1).map(char => char[0]);
+    
+    //find all visited
+    for (var key in elem)
+    {
+        if (elem[key] > 1)
+            elem += key;
+    }
+    return result.split('').join('');
 }
 
 const duplicates = getDuplicates('faaaabbcpppefpxh');
