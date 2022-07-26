@@ -219,8 +219,7 @@ namespace InterviewSamples
             
             if (level == 0)
             {
-                result.Add(tree.Value);
-                return result.ToArray();
+                return null;
             }
             //Add root
             queue.Enqueue((tree, 0));
