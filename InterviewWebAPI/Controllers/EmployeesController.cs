@@ -5,12 +5,12 @@ namespace InterviewWebAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class EmployeeController : ControllerBase
+    public class EmployeesController : ControllerBase
     {
        
-        private readonly ILogger<EmployeeController> _logger;
+        private readonly ILogger<EmployeesController> _logger;
 
-        public EmployeeController(ILogger<EmployeeController> logger)
+        public EmployeesController(ILogger<EmployeesController> logger)
         {
             _logger = logger;
         }

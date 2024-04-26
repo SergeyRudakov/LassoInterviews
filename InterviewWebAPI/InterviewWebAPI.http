@@ -1,6 +1,6 @@
 @InterviewWebAPI_HostAddress = http://localhost:5168
 
-GET {{InterviewWebAPI_HostAddress}}/weatherforecast/
+GET {{InterviewWebAPI_HostAddress}}/employees/
 Accept: application/json
 
 ###
