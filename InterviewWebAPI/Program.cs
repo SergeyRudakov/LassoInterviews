@@ -20,6 +20,9 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+// How to enable global error handling
+// What other features can be configured here?
+// What is the difference between app.Run and app.Use?
 
 app.MapControllers();
 
