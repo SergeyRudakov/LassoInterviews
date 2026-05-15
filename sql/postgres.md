@@ -95,7 +95,7 @@ CREATE TABLE formulas (
 );
 ```
 
-Example formulas:
+**Example formulas:**
 ```
 bmi = weight_kg / ((height_cm / 100) ^ 2)
 pulse_pressure = systolic - diastolic
@@ -104,3 +104,14 @@ risk_score = age * 0.2 + systolic * 0.1 + bmi * 0.3
 **Question:**
 
 Design a PostgreSQL-based solution that calculates formulas dynamically for each row.
+
+Given this formula table:
+```
+INSERT INTO formulas (code, expression)
+VALUES
+  ('bmi', 'weight_kg / ((height_cm / 100) ^ 2)'),
+  ('bad_formula', '1; DROP TABLE users; --');
+```
+
+**Question:**
+How would you safely evaluate formulas stored in the database?
