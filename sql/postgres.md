@@ -69,3 +69,38 @@ users_history
 - Temporal logic works for multiple updates to the same user.
 - Migration can be applied and rolled back safely.
 - Query performance is acceptable for production-sized data.
+
+
+
+# SQL interview task -  Dynamic formula calculation engine
+
+You have a table:
+```
+CREATE TABLE metrics (
+  id BIGSERIAL PRIMARY KEY,
+  patient_id UUID NOT NULL,
+  systolic NUMERIC,
+  diastolic NUMERIC,
+  weight_kg NUMERIC,
+  height_cm NUMERIC,
+  age NUMERIC
+);
+```
+
+```
+CREATE TABLE formulas (
+  id BIGSERIAL PRIMARY KEY,
+  code TEXT NOT NULL UNIQUE,
+  expression TEXT NOT NULL
+);
+```
+
+Example formulas:
+```
+bmi = weight_kg / ((height_cm / 100) ^ 2)
+pulse_pressure = systolic - diastolic
+risk_score = age * 0.2 + systolic * 0.1 + bmi * 0.3
+```
+**Question:**
+
+Design a PostgreSQL-based solution that calculates formulas dynamically for each row.
